@@ -2,7 +2,7 @@
     imports = [ ./common.nix ];
 
     boot.loader.grub = {
-        device = "/dev/disk/by-label/BOOT";
+        device = "nodev";
         efiSupport = true;
         enable = true;
     };
