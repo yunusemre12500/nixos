@@ -12,6 +12,9 @@
         discord
         fzf
         gh
+        insomnia
+        iptables
+        mongodb-compass
         nerdctl
         spotify
         teamspeak3
