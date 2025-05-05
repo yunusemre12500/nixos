@@ -31,6 +31,9 @@
     };
 
     nix = {
+        extraOptions = ''
+            experimental-features = flakes nix-command
+        '';
         gc = {
             automatic = true;
             dates = "daily";
