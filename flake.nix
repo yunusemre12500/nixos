@@ -8,8 +8,25 @@
     };
 
     outputs = { nixpkgs, ... }: let
+        pkgs = import nixpkgs {
+            inherit system;
+        };
         system = "x86_64-linux";
     in {
+        devShells.${system} = {
+            go = pkgs.mkShell {
+                name = "go-development-shell";
+                packages = with pkgs; [ go ];
+            };
+            nodejs = pkgs.mkShell {
+                name = "nodejs-development-shell";
+                packages = with pkgs; [ nodejs pnpm ];
+            };
+            rust = pkgs.mkShell {
+                name = "rust-development-shell";
+                packages = with pkgs; [ cargo rustc ];
+            };
+        };
         nixosConfigurations = {
             desktop = nixpkgs.lib.nixosSystem {
                 inherit system;

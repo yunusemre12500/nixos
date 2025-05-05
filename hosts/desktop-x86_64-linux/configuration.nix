@@ -12,10 +12,7 @@
         discord
         fzf
         gh
-        go
         nerdctl
-        nodejs_22
-        pnpm
         spotify
         teamspeak3
         vlc
