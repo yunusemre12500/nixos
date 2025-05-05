@@ -45,7 +45,7 @@
 
     users.users.yunus = {
         description = "Yunus Emre ALTINER";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "audio" "networkmanager" "wheel" "video" ];
         linger = true;
         initialPassword = "changeme";
         isNormalUser = true;
