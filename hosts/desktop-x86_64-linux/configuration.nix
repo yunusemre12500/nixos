@@ -1,6 +1,7 @@
 { pkgs, ... }: {
     imports = [
         ../../modules/common.nix
+        ../../modules/services/buildkitd.nix
         ../../modules/services/ntpd-rs.nix
         ../../modules/services/pipewire.nix
         ../../modules/services/xserver.nix
@@ -9,6 +10,7 @@
 
     environment.systemPackages = with pkgs; [
         brave
+        buildkit
         discord
         fzf
         gh
