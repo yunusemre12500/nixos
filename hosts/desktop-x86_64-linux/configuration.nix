@@ -18,6 +18,7 @@
         iptables
         mongodb-compass
         nerdctl
+        protobuf
         spotify
         teamspeak3
         vlc
