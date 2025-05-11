@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
     imports = [
         ../../modules/common.nix
         ../../modules/services/buildkitd.nix
@@ -8,7 +8,7 @@
         ./hardware-configuration.nix
     ];
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
         brave
         buildkit
         discord
@@ -18,12 +18,17 @@
         iptables
         mongodb-compass
         nerdctl
+        openssl
         protobuf
         spotify
         teamspeak3
         vlc
         vscode
-    ];
+    ])
+    ++
+    (with pkgs-unstable; [
+        kubernetes
+    ]);
 
     nixpkgs.config.allowUnfree = true;
 
