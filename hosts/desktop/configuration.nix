@@ -1,4 +1,4 @@
-{ lib, pkgs, pkgs-unstable, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/common.nix
@@ -7,8 +7,6 @@
     ../../modules/services/pipewire.nix
     ../../modules/services/xserver.nix
   ];
-
-  nixpkgs.config.allowUnfree = true;
 
   users.users.yunus = {
     description = "Yunus Emre ALTINER";
