@@ -52,7 +52,7 @@
           ./hosts/desktop/configuration.nix
           {
             home-manager = {
-            useGlobalPkgs = true;
+              useGlobalPkgs = true;
               useUserPackages = true;
               users.yunus = import ./home-manager/yunus.nix;
             };
