@@ -1,9 +1,9 @@
 { ... }: {
-    imports = [ ./common.nix ];
+  imports = [ ./common.nix ];
 
-    boot.loader.grub = {
-        device = "nodev";
-        efiSupport = true;
-        enable = true;
-    };
+  boot.loader.grub = {
+    device = "nodev";
+    efiSupport = true;
+    enable = true;
+  };
 }

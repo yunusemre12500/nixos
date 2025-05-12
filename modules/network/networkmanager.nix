@@ -1,9 +1,9 @@
 { ... }: {
-    imports = [ ./common.nix ];
+  imports = [ ./common.nix ];
 
-    networking.networkmanager = {
-        dhcp = "internal";
-        dns = "systemd-resolved";
-        enable = true;
-    };
+  networking.networkmanager = {
+    dhcp = "internal";
+    dns = "systemd-resolved";
+    enable = true;
+  };
 }

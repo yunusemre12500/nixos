@@ -1,6 +1,6 @@
 { ... }: {
-    imports = [ ./common.nix ];
+  imports = [ ./common.nix ];
 
-    networking.useNetworkd = true;
-    systemd.network.enable = true;
+  networking.useNetworkd = true;
+  systemd.network.enable = true;
 }

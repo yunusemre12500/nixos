@@ -1,3 +1,3 @@
 { ... }: {
-    boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 }
