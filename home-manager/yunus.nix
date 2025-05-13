@@ -18,13 +18,11 @@
       brave
       buildkit
       discord
-      fzf
       insomnia
       iptables
       mongodb-compass
       nerdctl
       openssl
-      protobuf
       spotify
       teamspeak3
       vlc
