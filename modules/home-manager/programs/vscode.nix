@@ -23,6 +23,7 @@
     userSettings = {
       "editor.minimap.enabled" = false;
       "workbench.colorTheme" = "Night Owl (No Italics)";
+      "workbench.iconTheme" = "material-icon-theme";
       "workbench.startupEditor" = "none";
       "redhat.telemetry.enabled" = false;
     };
