@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ../modules/home-manager/programs/direnv.nix
     ../modules/home-manager/programs/gh.nix
     ../modules/home-manager/programs/git.nix
     ../modules/home-manager/programs/gnupg.nix

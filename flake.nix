@@ -27,8 +27,6 @@
 
         shellHook = ''
           export PATH=~/go/bin:$PATH
-
-          ${pkgs.go}/bin/go version
         '';
       };
 
@@ -39,7 +37,13 @@
 
       rust = pkgs.mkShell {
         name = "Rust Development Shell Environment";
-        packages = with pkgs; [ cargo rustc ];
+        packages = with pkgs-unstable; [ cargo clippy rustc rustfmt rustup ];
+
+        shellHook = ''
+          export PATH=~/.cargo/bin:$PATH
+        '';
+
+        RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
       };
     };
 
