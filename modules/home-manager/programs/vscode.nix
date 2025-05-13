@@ -3,10 +3,10 @@
     enable = true;
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
-        hash = "sha256-FVZxMZ0QpCKLD0vX7LPvBywZgQ4kptjnCW9jCefwgJo=";
-        name = "crates";
-        publisher = "serayuzgur";
-        version = "0.6.7";
+        hash = "sha256-iLF2kxhSw39JBIs5K6hVmrEKueS8C22rnKCs+CiphwY=";
+        name = "dependi";
+        publisher = "fill-labs";
+        version = "0.7.14";
       }
       {
         hash = "sha256-43ZAwaApQBqNzq25Uy/AmkQqprU7QlgJVVimfCaiu9k=";
