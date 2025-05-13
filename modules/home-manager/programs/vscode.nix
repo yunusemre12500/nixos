@@ -1,7 +1,19 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    extensions = with pkgs.vscode-extensions; [ rust-lang.rust-analyzer ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        hash = "sha256-hQmA8PWjf2Nd60v5EAuqqD8LIEu7slrNs8luc3ePgZc=";
+        name = "better-comments";
+        publisher = "aaron-bond";
+        version = "3.0.2";
+      }
+      {
+        hash = "sha256-Q2gcuclG7NLR81HjKj/0RF0jM5Eqe2vZMbpoabp/osg=";
+        name = "code-runner";
+        publisher = "formulahendry";
+        version = "0.12.0";
+      }
       {
         hash = "sha256-iLF2kxhSw39JBIs5K6hVmrEKueS8C22rnKCs+CiphwY=";
         name = "dependi";
@@ -51,6 +63,18 @@
         version = "0.46.1";
       }
       {
+        hash = "sha256-dOicya0B2sriTcDSdCyhtp0Mcx5b6TUaFKVb0YU3jUc=";
+        name = "indent-rainbow";
+        publisher = "oderwat";
+        version = "8.3.1";
+      }
+      {
+        hash = "sha256-ht6Wm1X7zien+fjMv864qP+Oz4M6X6f2RXjrThURr6c=";
+        name = "javascriptsnippets";
+        publisher = "xabikos";
+        version = "1.8.0";
+      }
+      {
         hash = "sha256-E9UCSZe0hXnKwdNv6ua/Kzuy+wTFyeOGGVl7gFF4opY=";
         name = "material-icon-theme";
         publisher = "pkief";
@@ -73,6 +97,19 @@
         name = "prettier-vscode";
         publisher = "esbenp";
         version = "11.0.0";
+      }
+      {
+        hash = "sha256-OLi4gSjoz+TRgkb5UH1u6UTNfEF8ZgawrcXFDkoJtIc=";
+        name = "remote-containers";
+        publisher = "ms-vscode-remote";
+        version = "0.413.0";
+      }
+      {
+        hash = "sha256-Fj9cw+VJ2jkTGUclB1TLvURhzQsaryFQs/+f2RZOLHs=";
+        name = "todo-tree";
+        publisher = "gruntfuggly";
+        version = "0.0.226";
+
       }
       {
         hash = "sha256-kHQuS6wxp3Gu5WSjWRXXMLwSrv7LBSsnsNu7VY4H/J0=";
