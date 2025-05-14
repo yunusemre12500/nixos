@@ -18,6 +18,7 @@
     packages = with pkgs; [
       brave
       buildkit
+      cilium-cli
       discord
       insomnia
       iptables
