@@ -21,6 +21,7 @@
       discord
       insomnia
       iptables
+      kubectl
       mongodb-compass
       nerdctl
       openssl
