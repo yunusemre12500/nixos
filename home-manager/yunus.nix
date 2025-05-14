@@ -22,6 +22,7 @@
       insomnia
       iptables
       kubectl
+      kubernetes-helm
       mongodb-compass
       nerdctl
       openssl
