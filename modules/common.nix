@@ -1,5 +1,8 @@
 { lib, ... }: {
-  boot.initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "usb-storage" "xhci_pci" ];
+  boot = {
+    tmp.cleanOnBoot = true;
+    initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "usb-storage" "xhci_pci" ];
+  };
 
   console.keyMap = "trq";
 
