@@ -29,6 +29,7 @@
       lens
       mongodb-compass
       nerdctl
+      nixd
       openssl
       spotify
       teamspeak3
