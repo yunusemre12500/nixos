@@ -5,6 +5,7 @@
     ../modules/home-manager/programs/git.nix
     ../modules/home-manager/programs/gnupg.nix
     ../modules/home-manager/programs/jq.nix
+    ../modules/home-manager/programs/k9s.nix
     ../modules/home-manager/programs/nh.nix
     ../modules/home-manager/programs/obs-studio.nix
     ../modules/home-manager/programs/tmux.nix
