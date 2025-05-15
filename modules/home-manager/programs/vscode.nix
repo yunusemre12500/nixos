@@ -150,7 +150,11 @@
     ];
     package = pkgs.vscodium;
     userSettings = {
+      "editor.cursorBlinking" = "solid";
+      "editor.cursorSmoothCaretAnimation" = "on";
       "editor.minimap.enabled" = false;
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nixd";
       "workbench.colorTheme" = "Night Owl (No Italics)";
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.startupEditor" = "none";
