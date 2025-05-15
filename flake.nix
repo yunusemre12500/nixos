@@ -7,15 +7,13 @@
       url = "github:nix-community/home-manager/release-24.11";
     };
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
-   
 
   nixConfig = {
     experimental-features = [ "flakes" "nix-command" ];
   };
 
-  outputs = { home-manager, nixpkgs, nixpkgs-unstable, ... }: let
+  outputs = { home-manager, nixpkgs, ... }: let
     pkgs = import nixpkgs {
       inherit system;
 
@@ -25,36 +23,8 @@
         (import ./overlays/vscode.nix) 
       ]; 
     };
-    pkgs-unstable = import nixpkgs-unstable { inherit system; };
     system = "x86_64-linux";
   in {
-    devShells.${system} = {
-      go = pkgs.mkShell {
-        name = "Go Development Shell Environment";
-        packages = with pkgs-unstable; [ go ];
-
-        shellHook = ''
-          export PATH=~/go/bin:$PATH
-        '';
-      };
-
-      nodejs = pkgs.mkShell {
-        name = "Node.js Development Shell Environment";
-        packages = with pkgs; [ nodejs pnpm ];
-      };
-
-      rust = pkgs.mkShell {
-        name = "Rust Development Shell Environment";
-        packages = with pkgs-unstable; [ cargo clippy rustc rustfmt rustup ];
-
-        shellHook = ''
-          export PATH=~/.cargo/bin:$PATH
-        '';
-
-        RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
-      };
-    };
-
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -71,7 +41,7 @@
           }
         ];
 
-        specialArgs = { inherit pkgs pkgs-unstable; };
+        specialArgs = { inherit pkgs; };
       };
     };
   };
