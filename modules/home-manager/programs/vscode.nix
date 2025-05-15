@@ -148,6 +148,7 @@
         version = "1.18.0";
       }
     ];
+    package = pkgs.vscodium;
     userSettings = {
       "editor.minimap.enabled" = false;
       "workbench.colorTheme" = "Night Owl (No Italics)";

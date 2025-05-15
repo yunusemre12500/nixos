@@ -16,7 +16,15 @@
   };
 
   outputs = { home-manager, nixpkgs, nixpkgs-unstable, ... }: let
-    pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+    pkgs = import nixpkgs {
+      inherit system;
+
+      config.allowUnfree = true;
+
+      overlays = [
+        (import ./overlays/vscode.nix) 
+      ]; 
+    };
     pkgs-unstable = import nixpkgs-unstable { inherit system; };
     system = "x86_64-linux";
   in {
