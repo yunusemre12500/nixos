@@ -21,10 +21,12 @@
       buildkit
       cilium-cli
       discord
+      helmfile
       insomnia
       iptables
       kubectl
       kubernetes-helm
+      lens
       mongodb-compass
       nerdctl
       openssl
