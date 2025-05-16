@@ -33,6 +33,7 @@
       nerdctl
       nixd
       openssl
+      pinentry-gnome3
       spotify
       teamspeak3
       vlc
