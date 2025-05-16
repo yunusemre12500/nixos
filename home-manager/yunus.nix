@@ -12,6 +12,7 @@
     ../modules/home-manager/programs/vscode.nix
     ../modules/home-manager/programs/zed-editor.nix
     ../modules/home-manager/programs/zsh.nix
+    ../modules/home-manager/services/gpg-agent.nix
   ];
 
   home = {
