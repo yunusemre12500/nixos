@@ -27,6 +27,7 @@
       insomnia
       iptables
       kubectl
+      kubernetes
       kubernetes-helm
       lens
       mongodb-compass
