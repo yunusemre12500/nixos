@@ -10,7 +10,7 @@
 
   users.users.yunus = {
     description = "Yunus Emre ALTINER";
-    extraGroups = [ "audio" "networkmanager" "wheel" "video" ];
+    extraGroups = [ "audio" "input" "networkmanager" "wheel" "video" ];
     ignoreShellProgramCheck = true;
     initialPassword = "changeme";
     isNormalUser = true;

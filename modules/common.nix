@@ -51,6 +51,7 @@
     rtkit.enable = true;
     sudo.enable = false;
     sudo-rs.enable = true;
+    unprivilegedUsernsClone = true;
   };
 
   services.nscd.enable = false;

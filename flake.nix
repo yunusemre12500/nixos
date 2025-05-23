@@ -20,7 +20,8 @@
       config.allowUnfree = true;
 
       overlays = [
-        (import ./overlays/vscode.nix) 
+        (import ./overlays/vscode.nix)
+        (import ./overlays/containerd.nix) 
       ]; 
     };
     system = "x86_64-linux";
