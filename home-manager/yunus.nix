@@ -34,6 +34,7 @@
       pinentry-gnome3
       spotify
       teamspeak3
+      teamspeak6-client
       vlc
     ];
   };
