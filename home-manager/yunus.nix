@@ -18,9 +18,7 @@
   home = {
     stateVersion = "25.05";
     packages = with pkgs; [
-      alejandra
       brave
-      buildkit
       cilium-cli
       discord
       helmfile
@@ -33,7 +31,6 @@
       mongodb-compass
       nerdctl
       nixd
-      openssl
       pinentry-gnome3
       spotify
       teamspeak3
