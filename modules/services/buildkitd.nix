@@ -1,4 +1,5 @@
-{ pkgs, ...}: {
+{ pkgs, ... }:
+{
   systemd.services.buildkitd = {
     description = "BuildKit Daemon";
     serviceConfig = {

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     ./hardware-configuration.nix
     ../../modules/common.nix
@@ -10,7 +11,13 @@
 
   users.users.yunus = {
     description = "Yunus Emre ALTINER";
-    extraGroups = [ "audio" "input" "networkmanager" "wheel" "video" ];
+    extraGroups = [
+      "audio"
+      "input"
+      "networkmanager"
+      "wheel"
+      "video"
+    ];
     ignoreShellProgramCheck = true;
     initialPassword = "changeme";
     isNormalUser = true;

@@ -10,40 +10,46 @@
   };
 
   nixConfig = {
-    experimental-features = [ "flakes" "nix-command" ];
+    experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
   };
 
-  outputs = { home-manager, nixpkgs, ... }: let
-    pkgs = import nixpkgs {
-      inherit system;
-
-      config.allowUnfree = true;
-
-      overlays = [
-        (import ./overlays/vscode.nix)
-        (import ./overlays/containerd.nix) 
-      ]; 
-    };
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+  outputs =
+    { home-manager, nixpkgs, ... }:
+    let
+      pkgs = import nixpkgs {
         inherit system;
 
-        modules = [
-          home-manager.nixosModules.home-manager
-          ./hosts/desktop/configuration.nix
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.yunus = import ./home-manager/yunus.nix;
-            };
-          }
-        ];
+        config.allowUnfree = true;
 
-        specialArgs = { inherit pkgs; };
+        overlays = [
+          (import ./overlays/vscode.nix)
+          (import ./overlays/containerd.nix)
+        ];
+      };
+      system = "x86_64-linux";
+    in
+    {
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+
+          modules = [
+            home-manager.nixosModules.home-manager
+            ./hosts/desktop/configuration.nix
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.yunus = import ./home-manager/yunus.nix;
+              };
+            }
+          ];
+
+          specialArgs = { inherit pkgs; };
+        };
       };
     };
-  };
 }

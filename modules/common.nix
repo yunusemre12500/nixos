@@ -1,7 +1,14 @@
-{ lib, ... }: {
+{ lib, ... }:
+{
   boot = {
     tmp.cleanOnBoot = true;
-    initrd.availableKernelModules = [ "ahci" "nvme" "usbhid" "usb-storage" "xhci_pci" ];
+    initrd.availableKernelModules = [
+      "ahci"
+      "nvme"
+      "usbhid"
+      "usb-storage"
+      "xhci_pci"
+    ];
   };
 
   console.keyMap = "trq";
@@ -22,7 +29,10 @@
     "/boot" = {
       device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
-      options = [ "dmask=0077" "fmask=0077" ];
+      options = [
+        "dmask=0077"
+        "fmask=0077"
+      ];
     };
   };
 
@@ -35,7 +45,7 @@
 
   nix = {
     extraOptions = ''
-        experimental-features = flakes nix-command
+      experimental-features = flakes nix-command
     '';
 
     optimise = {
@@ -57,7 +67,7 @@
   services.nscd.enable = false;
 
   system = {
-    nssModules = lib.mkForce [];
+    nssModules = lib.mkForce [ ];
     stateVersion = "25.05";
   };
 

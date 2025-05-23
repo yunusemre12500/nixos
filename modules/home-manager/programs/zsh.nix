@@ -1,9 +1,14 @@
-{ ... }: {
+{ ... }:
+{
   programs = {
     zsh = {
       autosuggestion = {
         enable = true;
-        strategy = [ "completion" "history"  "match_prev_cmd" ];
+        strategy = [
+          "completion"
+          "history"
+          "match_prev_cmd"
+        ];
       };
       enable = true;
       enableCompletion = true;

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     ../modules/home-manager/programs/direnv.nix
     ../modules/home-manager/programs/gh.nix
@@ -31,6 +32,7 @@
       mongodb-compass
       nerdctl
       nixd
+      nixfmt-rfc-style
       pinentry-gnome3
       spotify
       teamspeak3

@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   imports = [
     ../../modules/boot-loader/grub.nix
     ../../modules/network/networkmanager.nix

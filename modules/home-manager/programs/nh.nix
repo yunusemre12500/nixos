@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   programs.nh = {
     clean = {
       dates = "daily";
