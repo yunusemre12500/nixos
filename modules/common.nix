@@ -44,13 +44,15 @@
   };
 
   nix = {
-    extraOptions = ''
-      experimental-features = flakes nix-command
-    '';
-
     optimise = {
       automatic = true;
       dates = [ "daily" ];
+    };
+
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "flakes" "nix-command" ];
+      max-jobs = "auto";
     };
   };
 
