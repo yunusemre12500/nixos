@@ -171,6 +171,6 @@
         "redhat.telemetry.enabled" = false;
       };
     };
+   package = pkgs.vscodium;
   };
-  package = pkgs.vscodium;
 }
