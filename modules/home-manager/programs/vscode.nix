@@ -2,6 +2,7 @@
 {
   programs.vscode = {
     enable = true;
+    mutableExtensionsDir = false;
     profiles.default = {
       extensions =
         with pkgs.vscode-extensions;
@@ -18,6 +19,12 @@
             name = "code-runner";
             publisher = "formulahendry";
             version = "0.12.0";
+          }
+          {
+            hash = "sha256-uVE7sEO8XN3ArFpElUw25/BKyCOzF1EmZ5nHBkdoL/0=";
+            name = "cpptools";
+            publisher = "ms-vscode";
+            version = "1.26.1";
           }
           {
             hash = "sha256-mw6Y/nWbP2i2+wbUz3C1pJRTJWKfuN2nidJT0vG3fgQ=";
@@ -135,6 +142,18 @@
             version = "3.0.13";
           }
           {
+            hash = "sha256-2zexyX1YKD5jgtsvDx7/z3luh5We71ys+XRlVcNywfs=";
+            name = "vscodeintellicode";
+            publisher = "visualstudioexptteam";
+            version = "1.3.2";
+          }
+          {
+            hash = "sha256-8xBD+WLBaxYt8v3+8lvV2SiqV89iE4jeQod2kH7LNHU=";
+            name = "intellicode-api-usage-examples";
+            publisher = "visualstudioexptteam";
+            version = "0.2.9";
+          }
+          {
             hash = "sha256-mHKaWXSyDmsdQVzMqJI6ctNUwE/6bs1ZyeAEWKg9CV8=";
             name = "vscode-github-actions";
             publisher = "github";
@@ -171,6 +190,6 @@
         "redhat.telemetry.enabled" = false;
       };
     };
-   package = pkgs.vscodium;
+    # package = pkgs.vscodium;
   };
 }
