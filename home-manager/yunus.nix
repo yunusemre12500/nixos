@@ -21,6 +21,7 @@
     packages = with pkgs; [
       brave
       cilium-cli
+      cri-tools
       discord
       helmfile
       insomnia
