@@ -18,5 +18,9 @@
     useDHCP = false;
   };
 
-  services.resolved.enable = true;
+  services.resolved = {
+    dnssec = "true";
+    dnsovertls = "true";
+    enable = true;
+  };
 }
