@@ -3,7 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = "DP-1,1920x1080@179.98,0x0,1.25";
+      monitor = "DP-1,1920x1080@179.98,0x0,1";
       "$mainMod" = "SUPER";
       "$menu" = "wofi --show drun -G -I -i";
       "$terminal" = "kitty";
@@ -22,9 +22,11 @@
         "$mainMod, right, movefocus, r"
         "$mainMod, C, killactive"
         "$mainMod, J, togglesplit,"
+        "$mainMod, L, exec, hyprlock"
+        "$mainMod, M, exit"
+        "$mainMod, Q, exec, waylock"
         "$mainMod, R, exec, $menu"
         "$mainMod, T, exec, $terminal"
-        "$mainMod, M, exit"
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
