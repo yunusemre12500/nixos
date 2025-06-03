@@ -1,0 +1,4 @@
+{ ... }:
+{
+  programs.waylogout.enable = true;
+}
