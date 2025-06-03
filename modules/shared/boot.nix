@@ -14,6 +14,7 @@
     loader.systemd-boot = {
       editor = false;
       enable = true;
+      memtest86.enable = true;
     };
   };
 }
