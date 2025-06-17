@@ -73,6 +73,7 @@
           sandboxer = "podsandbox"
 
           [plugins."io.containerd.cri.v1.runtime".containerd.runtimes.runc.options]
+            BinaryName = "${pkgs.runc}/bin/runc"
             SystemdCgroup = true
 
       [plugins."io.containerd.cri.v1.runtime".cni]

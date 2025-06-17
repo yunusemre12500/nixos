@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
     ./config.nix
@@ -13,6 +13,9 @@
       ];
       description = "Containerd Container Runtime";
       documentation = [ "https://containerd.io/docs" ];
+      environment = lib.mkForce {
+        PATH = "${pkgs.runc}/bin:$PATH";
+      };
       requires = [ "containerd.socket" ];
       serviceConfig = {
         Delegate = "yes";
