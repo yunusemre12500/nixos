@@ -2,10 +2,10 @@
 {
   systemd = {
     services.buildkitd = {
-      after = [ "buildkitd.socket" ];
+      after = [ "containerd.service" "buildkitd.socket" ];
       description = "BuildKit";
       documentation = [ "https://github.com/moby/buildkit" ];
-      requires = [ "buildkitd.socket" ];
+      requires = [ "containerd.service" "buildkitd.socket" ];
       serviceConfig = {
         ExecStart = "${pkgs.buildkit}/bin/buildkitd";
         Restart = "always";
