@@ -15,6 +15,7 @@
     ./security.nix
     ./time.nix
     ./users.nix
+    ./xdg.nix
   ];
 
   documentation = {
